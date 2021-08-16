@@ -9,10 +9,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter your user name :");
-//        String userName = scanner.nextLine();
-//        System.out.println("Enter your password : ");
-//        String password = scanner.nextLine();
+        System.out.println("Enter your user name :");
+        String userName = scanner.nextLine();
+        System.out.println("Enter your password : ");
+        String password = scanner.nextLine();
 
         System.setProperty("webdriver.chrome.driver",
                 "C:\\Users\\97254\\Desktop\\chromedriver\\chromedriver.exe");
@@ -32,9 +32,9 @@ public class Main {
         }
 
         WebElement username = driver.findElement(By.id("Ecom_User_ID"));
-        username.sendKeys("itamarzaf");
+        username.sendKeys(userName);
         WebElement passwordEnter = driver.findElement(By.id("Ecom_Password"));
-        passwordEnter.sendKeys("itamar0545");
+        passwordEnter.sendKeys(password);
         WebElement enterButton = driver.findElement(By.id("wp-submit"));
         enterButton.click();
         List<WebElement> moudle = driver.findElements(By.className("col-sm-6"));
